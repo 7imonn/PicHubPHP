@@ -1,0 +1,140 @@
+.specificUser{
+	display: none;
+}
+.CardSection{
+	width: 70vw;
+	margin: 0 auto;
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('../img/Landingpage.jpg');
+    min-height: 100%;
+}
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+form{
+    width: 250px;
+    height: 200px;
+ }
+.loginform{
+    white-space:nowrap; 
+    background-color: #040404;
+    height: 290px;
+    }
+.loginform h2{
+    font-size: 40px;
+    color: white;
+    letter-spacing: 0.3em;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+.loginform form{
+    width: 280px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+.buttonlogin{
+    background-color: #777;
+    color: #040404;
+    width: 75px;
+    height: 30px;
+    font-size: 13px;
+    border: none; 
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.buttonlogin:focus{
+    background-color: #777;
+}
+.buttonlogin i{
+font-size: 13px;
+float: left;
+margin-top: 6px;
+}
+ .brand-logo{
+     font-size: 40px !important;
+     margin-left: 10px;
+ }
+ .brand-font{
+     font-size: 50px;
+     margin-left: 60px;
+ }
+.hover{
+    display: none;
+    bottom: 5px;
+    }
+.card:hover .hover{
+    display: block;
+}
+.card-hover {
+    position: absolute;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+	color:white;
+  }
+.card-icon-title{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    padding: 24px;
+    display: block;
+    float: right;
+}
+.icon-left {
+    font-size: 30px !important;
+    color: #ffab40;
+}
+.icon-left:hover{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
