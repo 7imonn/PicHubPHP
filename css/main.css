@@ -25,6 +25,10 @@ body, html {
     background-image: url('../img/Landingpage.jpg');
     min-height: 100%;
 }
+.bgimg-2 {
+    background-image: url('../img/uplaod.jpg');
+    min-height: 100%;
+}
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
@@ -34,10 +38,6 @@ body, html {
         background-attachment: scroll;
     }
 }
-form{
-    width: 250px;
-    height: 200px;
- }
 .loginform{
     white-space:nowrap; 
     background-color: #040404;
@@ -58,6 +58,33 @@ form{
     margin: 0 auto;
     text-align: center;
     padding: 20px;
+    width: 250px;
+    height: 200px;
+}
+.uploadfrom{
+    white-space:nowrap; 
+    background-color: #040404;
+}
+.uploadfrom h2{
+    font-size: 40px;
+    color: white;
+    letter-spacing: 0.3em;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+.uploadfrom form{
+    width: 280px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    height: 420px;
+}
+.uploadfrom select{
+    background-color: black;
 }
 .buttonlogin{
     background-color: #777;
@@ -69,6 +96,9 @@ form{
     display: block;
     margin: 0 auto;
     text-align: center;
+}
+.btn{
+    background-color: #777 !important;
 }
 .buttonlogin:focus{
     background-color: #777;
