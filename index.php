@@ -32,7 +32,7 @@ if (! $_SESSION['user']) {
     <nav>
       <div class="nav-wrapper grey darken-2">
         <a href="#">
-            <a href="index.html" class="brand-font"><i class="material-icons brand-logo">camera</i>PicHub</a>
+            <a href="index.php" class="brand-font"><i class="material-icons brand-logo">camera</i>PicHub</a>
         </a>
         
         <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -44,7 +44,7 @@ if (! $_SESSION['user']) {
             </a>
           </li>
           <li>
-            <a href="werbebilder.html">Werbebilder</a>
+            <a href="werbebilder.php">Werbebilder</a>
           </li>
           <li>
             <a href="upload.php">upload</a>
@@ -54,7 +54,61 @@ if (! $_SESSION['user']) {
     </nav>
   </header>
   <section class="CardSection">
-    <div class="row">
+  <h5>Werbebilder:</h5>
+  <?php
+  //https://www.php-kurs.com/mysql-datenbank-auslesen.htm
+  $sqlpostwerbebilder = "SELECT * FROM tblpost";
+  $db_erg = mysqli_query( $mysqli, $sqlpostwerbebilder );
+  
+  $werbebilderh5 = "1";
+  while ($zeile = mysqli_fetch_array($db_erg))
+  {
+    if($zeile['restriction'] = "1")
+    {
+    echo "<div class='row'>";
+    echo "<div class='col s4'>";
+    echo "<div class='card'>";
+    echo "<div class='card-image'>";
+    echo "<img src=". $zeile['Picture_pfad'] .">";
+    echo "<div class='hover card-hover'>";
+    echo "<span class='card-title'>". $zeile['title'] ."</span>";
+    echo "<a class='card-icon-title'";
+    echo "<i class='material-icons icon-left'>cloud_download</i>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
+  }
+  }
+  ?>
+  <h5>Persöndliche Bilder:</h5>
+  <?php
+  //https://www.php-kurs.com/mysql-datenbank-auslesen.htm
+  $sqlpostwerbebilder = "SELECT * FROM tblpost";
+  $db_erg = mysqli_query( $mysqli, $sqlpostwerbebilder );
+  
+  $werbebilderh5 = "1";
+  while ($zeile = mysqli_fetch_array($db_erg))
+  {
+    if($zeile['restriction'] = "1")
+    {
+    echo "<div class='row'>";
+    echo "<div class='col s4'>";
+    echo "<div class='card'>";
+    echo "<div class='card-image'>";
+    echo "<img src=". $zeile['Picture_pfad'] .">";
+    echo "<div class='hover card-hover'>";
+    echo "<span class='card-title'>". $zeile['title'] ."</span>";
+    echo "<a class='card-icon-title'";
+    echo "<i class='material-icons icon-left'>cloud_download</i>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
+  }
+  }
+  ?>
+    <!-- <div class="row">
       <div class="col s4">
         <div class="card">
           <div class="card-image">
@@ -120,7 +174,7 @@ if (! $_SESSION['user']) {
                   </div>
                 </div>
               </div>
-    </div>
+    </div> -->
   </section>
 
 
